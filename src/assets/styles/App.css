@@ -1,0 +1,166 @@
+/* ------------- Root Section ------------- */
+
+:root {
+    --bg-color: #f3f4f6;
+    --primary: #94b5dc;
+    --success: #28a745;
+    --danger: #dc3545;
+    --machine-bg: #484964;
+    --item-bg: #fff;
+    --glass: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ------------- Body ------------- */
+
+body {
+    background: var(--bg-color);
+}
+
+/* ------------- Main Pannel ------------- */
+
+.main-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ------------- Machine  ------------- */
+
+.machine-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: var(--item-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    width: 1000px;
+    max-width: 95vw;
+    gap: 20px;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-around;
+    background: #e6f0ff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.content-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vending-machine {
+    background: var(--machine-bg);
+    padding: 20px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 600px;
+    height: 410px;
+    overflow: hidden;
+}
+
+/* ------------- Machine Items ------------- */
+
+.machine-items {
+    background: var(--item-bg);
+    color: #000;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.machine-items:hover,
+.machine-items.selected {
+    background: #cce5ff;
+    transform: translateY(-2px);
+    border: 2px solid var(--primary);
+}
+
+.machine-items-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.machine-items-price {
+    font-size: 13px;
+}
+
+/* ------------- Selection Info ------------- */
+
+.side-selection {
+    width: 300px;
+    background: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.side-selection h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.money-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.money-btn {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.money-btn:hover {
+    background-color: #357ab8;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buy-btn {
+    background-color: var(--success);
+    color: #fff;
+}
+
+.cancel-btn {
+    background-color: var(--danger);
+    color: #fff;
+}
+
+.buy-btn,
+.cancel-btn {
+    flex: 1;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
